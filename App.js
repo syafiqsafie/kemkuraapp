@@ -16,6 +16,7 @@ import { createStackNavigator,
 
 import LoginScreen from './components/LoginScreen.js';
 import HomeScreen from './components/HomeScreen.js';
+import AboutScreen from './components/AboutScreen.js';
 
 const RootStack = createStackNavigator({
   Login: {
@@ -23,7 +24,10 @@ const RootStack = createStackNavigator({
   },
   Home: {
     screen: HomeScreen
-  }
+  },
+  About: {
+    screen: AboutScreen
+  },
 });
 
 const App = createAppContainer(RootStack);

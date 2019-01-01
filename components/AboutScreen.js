@@ -11,32 +11,18 @@ import {Platform,
   StyleSheet,
   Text,
   View} from 'react-native';
-import AboutScreen from './AboutScreen.js';
-import { createMaterialTopTabNavigator, createAppContainer } from 'react-navigation'
-//import { createBottomTabNavigator } from 'react-navigation' for iOS
 
-class HomeScreen extends Component{
+class AboutScreen extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <Text>This is Home</Text>
+        <Text>This is about screen</Text>
       </View>
     );
   }
 }
 
-const RootStack = createMaterialTopTabNavigator({
-  Home: {
-    screen: HomeScreen
-  },
-  About: {
-    screen: AboutScreen
-  },
-});
-
-const App = createAppContainer(RootStack);
-
-export default App;
+export default AboutScreen;
 
 const styles = StyleSheet.create({
   container: {
