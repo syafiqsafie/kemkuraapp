@@ -11,25 +11,18 @@ import {Platform,
   StyleSheet,
   Text,
   View} from 'react-native';
-import { createStackNavigator,
-  createAppContainer } from 'react-navigation';
 
-import LoginScreen from './components/LoginScreen.js';
-import HomeScreen from './components/HomeScreen.js';
-
-const RootStack = createStackNavigator({
-  Login: {
-    screen: LoginScreen
-  },
-  Home: {
-    screen: HomeScreen
+class HomeScreen extends Component{
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>HomeScreen</Text>
+      </View>
+    );
   }
-});
+}
 
-const App = createAppContainer(RootStack);
-
-export default App;
-
+export default HomeScreen;
 
 const styles = StyleSheet.create({
   container: {

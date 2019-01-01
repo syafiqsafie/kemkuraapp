@@ -10,26 +10,21 @@ import React, {Component} from 'react';
 import {Platform,
   StyleSheet,
   Text,
-  View} from 'react-native';
-import { createStackNavigator,
-  createAppContainer } from 'react-navigation';
+  View,
+  Button} from 'react-native';
 
-import LoginScreen from './components/LoginScreen.js';
-import HomeScreen from './components/HomeScreen.js';
-
-const RootStack = createStackNavigator({
-  Login: {
-    screen: LoginScreen
-  },
-  Home: {
-    screen: HomeScreen
+class LoginScreen extends Component{
+  render() {
+    return (
+      <View style={styles.container}>
+        <Button title="Go to Home Screen"
+          onPress={() => this.props.navigation.navigate('Home')} />
+      </View>
+    );
   }
-});
+}
 
-const App = createAppContainer(RootStack);
-
-export default App;
-
+export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
