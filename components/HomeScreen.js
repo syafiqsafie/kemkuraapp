@@ -13,7 +13,8 @@ import {Platform,
   View} from 'react-native';
 import AboutScreen from './AboutScreen.js';
 import { createMaterialTopTabNavigator, createAppContainer } from 'react-navigation'
-//import { createBottomTabNavigator } from 'react-navigation' for iOS
+//import { createMaterialTopTabNavigator,createBottomTabNavigator } from 'react-navigation' for iOS
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 class HomeScreen extends Component{
   render() {
@@ -27,10 +28,22 @@ class HomeScreen extends Component{
 
 const RootStack = createMaterialTopTabNavigator({
   Home: {
-    screen: HomeScreen
+    screen: HomeScreen,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="home" size={20} />
+      )
+    }
   },
   About: {
-    screen: AboutScreen
+    screen: AboutScreen,
+    navigationOptions: {
+      tabBarLabel: 'About',
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="book" size={20} />
+      )
+    }
   },
 });
 
